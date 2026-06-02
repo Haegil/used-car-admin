@@ -1,40 +1,50 @@
 # 중고차 관리 서비스
 
-## 1. 프로젝트 소개
+Node.js, Express, React를 학습하기 위해 만든 중고차 관리 웹 애플리케이션입니다. 차량 정보를 등록, 조회, 수정, 삭제할 수 있고 제조사와 가격 조건으로 목록을 검색할 수 있습니다.
 
-중고차 정보를 등록, 조회, 수정, 삭제할 수 있는 웹 서비스입니다. 관리자는 차량 정보를 등록하고, 사용자는 제조사와 가격 조건에 맞는 차량을 검색할 수 있습니다. 현재는 프로토타입이므로 관리자가 로그인되어 있다는 전제로 동작합니다.
+현재 데이터는 DB가 아니라 서버 메모리에서 관리하며, 초기 데이터는 `data/data.json`에서 불러옵니다.
 
-## 2. 주요 기능
+## 주요 기능
 
 - 차량 목록 조회
-- 차량 상세 조회
-- 차량 등록
-- 차량 수정
-- 차량 삭제
-- 제조사별 검색
+- 차량 상세 모달 조회
+- 차량 등록, 수정 모달
+- 차량 삭제 확인 모달
+- 제조사 검색
 - 최소 가격, 최대 가격 필터
+- 페이지당 10개, 30개, 50개 목록 페이징
+- 가격, 연식 숫자 입력 검증
+- React 빌드 파일을 Express static으로 제공
 
-## 3. 사용 기술
+## 사용 기술
 
 - Frontend: Vite, React, Tailwind CSS
 - Backend: Node.js, Express
 - Data: 서버 메모리, `data/data.json`
 - Deploy: Render
 
-## 4. 실행 화면
+## 실행 화면
 
 ![차량 목록 화면](assets/screenshots/car-list.svg)
 
-## 5. 설치 및 실행 방법
+## ERD
 
-루트 서버를 실행합니다.
+현재는 실제 DB를 사용하지 않지만, 차량 데이터 구조는 아래 `cars` 엔티티를 기준으로 설계했습니다.
+
+![cars ERD](assets/erd/car-erd.svg)
+
+## 설치 및 실행
+
+루트에서 백엔드 서버를 실행합니다.
 
 ```bash
 npm install
 npm start
 ```
 
-프론트엔드 개발 서버를 실행합니다.
+서버는 기본적으로 `http://localhost:3000`에서 실행됩니다. `frontend/dist`가 있으면 Express가 React 화면을 static으로 제공합니다.
+
+프론트엔드만 개발 서버로 실행하려면 아래 명령을 사용합니다.
 
 ```bash
 cd frontend
@@ -42,25 +52,36 @@ npm install
 npm run dev
 ```
 
-Render 배포용 빌드를 실행합니다.
+Render 배포와 같은 방식으로 프론트엔드를 빌드한 뒤 Express 서버에서 제공하려면 아래 명령을 사용합니다.
 
 ```bash
 npm run build
 npm start
 ```
 
-## 6. 배포 주소
+## Render 배포 설정
 
-- Render 배포 후 주소를 여기에 기록합니다.
-- 예시: `https://your-service-name.onrender.com`
+Render Web Service 생성 후 아래처럼 설정합니다.
 
-## 7. 폴더 구조
+```text
+Build Command: npm install && npm run build
+Start Command: npm start
+```
+
+서버 포트는 Render가 제공하는 `PORT` 환경변수를 사용합니다.
+
+```js
+const port = process.env.PORT || 3000;
+```
+
+## 폴더 구조
 
 ```text
 codex-lab
 ├── README.md
 ├── server.js
 ├── package.json
+├── package-lock.json
 ├── data
 │   └── data.json
 ├── assets
@@ -69,19 +90,23 @@ codex-lab
 │   └── screenshots
 │       └── car-list.svg
 ├── frontend
+│   ├── public
 │   ├── src
 │   │   ├── components
 │   │   ├── pages
 │   │   ├── App.jsx
 │   │   └── main.jsx
+│   ├── package.json
+│   ├── package-lock.json
 │   └── vite.config.js
 └── prompt
     ├── API_spec.md
+    ├── additional_prompt.md
     ├── init_prompt.md
     └── troubleShooting.md
 ```
 
-## 8. API 요약
+## API 요약
 
 | 기능 | Method | URL |
 |---|---|---|
@@ -94,29 +119,16 @@ codex-lab
 | 제조사 검색 | GET | `/api/cars/search?company=HYUNDAI` |
 | 가격 필터 | GET | `/api/cars/filter?minPrice=2000&maxPrice=3000` |
 
-전체 자동차 목록을 조회합니다.
+차량 목록을 조회합니다.
 
 ```bash
 curl http://localhost:3000/api/cars
 ```
 
-회사 이름으로 자동차를 검색합니다.
-
-```bash
-curl "http://localhost:3000/api/cars/search?company=HYUNDAI"
-```
-
-가격 범위로 자동차를 필터링합니다.
+가격 범위로 차량을 필터링합니다.
 
 ```bash
 curl "http://localhost:3000/api/cars/filter?minPrice=2000&maxPrice=3000"
-```
-
-최소 가격 또는 최대 가격만 사용해도 동작합니다.
-
-```bash
-curl "http://localhost:3000/api/cars/filter?minPrice=2500"
-curl "http://localhost:3000/api/cars/filter?maxPrice=2500"
 ```
 
 차량을 등록합니다.
@@ -127,26 +139,28 @@ curl -X POST http://localhost:3000/api/cars \
   -d '{"name":"IONIQ 5","price":4300,"company":"HYUNDAI","year":2024}'
 ```
 
+차량 정보를 수정합니다.
+
+```bash
+curl -X PUT http://localhost:3000/api/cars/1 \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Avante","price":2100,"company":"HYUNDAI","year":2023}'
+```
+
+차량을 삭제합니다.
+
+```bash
+curl -X DELETE http://localhost:3000/api/cars/1
+```
+
 자세한 API 명세는 [prompt/API_spec.md](prompt/API_spec.md)를 참고합니다.
 
-## 9. AI 활용 방식
+## 문제 해결 기록
 
-- 초기 요구사항을 `prompt/init_prompt.md`에 정리했다.
-- Codex를 사용해 Express API, React UI, Tailwind CSS 화면, 문서를 생성했다.
-- 생성 후 `node --check`, 프론트 빌드, API 호출로 기본 동작을 확인한다.
+개발 중 발생한 문제와 해결 과정은 [prompt/troubleShooting.md](prompt/troubleShooting.md)에 정리했습니다.
 
-## 10. 문제 해결 기록
-
-트러블슈팅 기록은 [prompt/troubleShooting.md](prompt/troubleShooting.md)에 정리했습니다.
-
-## 11. 개선 예정 사항
+## 개선 예정 사항
 
 - 로그인 기능 추가
 - 실제 DB 연동
-- 페이지네이션 추가
-- 등록/수정 입력값 검증 강화
 - 테스트 코드 추가
-
-## ERD
-
-![cars ERD](assets/erd/car-erd.svg)

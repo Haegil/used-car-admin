@@ -1,25 +1,48 @@
-<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="900" height="520" fill="#f8fafc"/>
-  <rect x="250" y="70" width="400" height="380" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
-  <rect x="250" y="70" width="400" height="58" fill="#1d4ed8"/>
-  <text x="450" y="106" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">cars</text>
-  <line x1="250" y1="128" x2="650" y2="128" stroke="#0f172a" stroke-width="2"/>
-  <text x="280" y="170" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">_id</text>
-  <text x="455" y="170" font-family="Arial, sans-serif" font-size="18" fill="#334155">INT, PK, AUTO_INCREMENT</text>
-  <line x1="250" y1="190" x2="650" y2="190" stroke="#e2e8f0"/>
-  <text x="280" y="225" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">name</text>
-  <text x="455" y="225" font-family="Arial, sans-serif" font-size="18" fill="#334155">VARCHAR(100), NOT NULL</text>
-  <line x1="250" y1="245" x2="650" y2="245" stroke="#e2e8f0"/>
-  <text x="280" y="280" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">price</text>
-  <text x="455" y="280" font-family="Arial, sans-serif" font-size="18" fill="#334155">INT, NOT NULL</text>
-  <line x1="250" y1="300" x2="650" y2="300" stroke="#e2e8f0"/>
-  <text x="280" y="335" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">company</text>
-  <text x="455" y="335" font-family="Arial, sans-serif" font-size="18" fill="#334155">VARCHAR(50), NOT NULL</text>
-  <line x1="250" y1="355" x2="650" y2="355" stroke="#e2e8f0"/>
-  <text x="280" y="390" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">year</text>
-  <text x="455" y="390" font-family="Arial, sans-serif" font-size="18" fill="#334155">INT, NOT NULL</text>
-  <line x1="250" y1="410" x2="650" y2="410" stroke="#e2e8f0"/>
-  <text x="280" y="445" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">created_at</text>
-  <text x="455" y="445" font-family="Arial, sans-serif" font-size="18" fill="#334155">DATETIME, DEFAULT CURRENT_TIMESTAMP</text>
-  <text x="450" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#64748b">서버 메모리에 저장되는 단일 cars 엔티티</text>
+<svg width="960" height="600" viewBox="0 0 960 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">cars entity relationship diagram</title>
+  <desc id="desc">Single cars entity used by the used car admin service.</desc>
+
+  <rect width="960" height="600" fill="#f8fafc"/>
+
+  <text x="480" y="54" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Used Car Admin ERD</text>
+  <text x="480" y="82" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#64748b">In-memory data model based on data/data.json</text>
+
+  <rect x="210" y="120" width="540" height="450" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+  <rect x="210" y="120" width="540" height="60" rx="4" fill="#1d4ed8"/>
+  <path d="M210 176H750V180H210V176Z" fill="#0f172a"/>
+  <text x="480" y="158" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">cars</text>
+
+  <text x="246" y="216" font-family="Verdana, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">Column</text>
+  <text x="430" y="216" font-family="Verdana, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">Type</text>
+  <text x="610" y="216" font-family="Verdana, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">Note</text>
+  <line x1="210" y1="236" x2="750" y2="236" stroke="#cbd5e1"/>
+
+  <text x="246" y="270" font-family="Verdana, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">_id</text>
+  <text x="430" y="270" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#334155">Number</text>
+  <text x="610" y="270" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#334155">Primary key</text>
+  <line x1="210" y1="292" x2="750" y2="292" stroke="#e2e8f0"/>
+
+  <text x="246" y="326" font-family="Verdana, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">name</text>
+  <text x="430" y="326" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#334155">String</text>
+  <text x="610" y="326" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#334155">Required</text>
+  <line x1="210" y1="348" x2="750" y2="348" stroke="#e2e8f0"/>
+
+  <text x="246" y="382" font-family="Verdana, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">price</text>
+  <text x="430" y="382" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#334155">Number</text>
+  <text x="610" y="382" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#334155">0 or higher</text>
+  <line x1="210" y1="404" x2="750" y2="404" stroke="#e2e8f0"/>
+
+  <text x="246" y="438" font-family="Verdana, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">company</text>
+  <text x="430" y="438" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#334155">String</text>
+  <text x="610" y="438" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#334155">Required</text>
+  <line x1="210" y1="460" x2="750" y2="460" stroke="#e2e8f0"/>
+
+  <text x="246" y="494" font-family="Verdana, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">year</text>
+  <text x="430" y="494" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#334155">Number</text>
+  <text x="610" y="494" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#334155">0 or higher</text>
+
+  <rect x="210" y="500" width="540" height="1" fill="#e2e8f0"/>
+  <text x="246" y="532" font-family="Verdana, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">created_at</text>
+  <text x="430" y="532" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#334155">ISO date string</text>
+  <text x="610" y="532" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#334155">Created time</text>
 </svg>
