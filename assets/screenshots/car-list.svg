@@ -1,59 +1,124 @@
-<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Used Car Admin main page</title>
+  <desc id="desc">Main page with header, search filters, pagination controls, and car table.</desc>
+
   <rect width="1200" height="760" fill="#f8fafc"/>
-  <rect y="0" width="1200" height="108" fill="#ffffff"/>
-  <line y1="108" x2="1200" y2="108" stroke="#e2e8f0"/>
-  <text x="64" y="42" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">USED CAR ADMIN</text>
-  <text x="64" y="78" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#0f172a">중고차 관리 서비스</text>
-  <rect x="800" y="28" width="92" height="52" fill="#f8fafc" stroke="#e2e8f0"/>
-  <rect x="908" y="28" width="92" height="52" fill="#f8fafc" stroke="#e2e8f0"/>
-  <rect x="1016" y="28" width="92" height="52" fill="#f8fafc" stroke="#e2e8f0"/>
-  <text x="846" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">조회</text>
-  <text x="846" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">60</text>
-  <text x="954" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">제조사</text>
-  <text x="954" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">17</text>
-  <text x="1062" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">선택</text>
-  <text x="1062" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">1</text>
-  <rect x="64" y="140" width="756" height="88" fill="#ffffff" stroke="#e2e8f0"/>
-  <rect x="88" y="170" width="210" height="34" fill="#ffffff" stroke="#cbd5e1"/>
-  <rect x="318" y="170" width="120" height="34" fill="#ffffff" stroke="#cbd5e1"/>
-  <rect x="458" y="170" width="120" height="34" fill="#ffffff" stroke="#cbd5e1"/>
-  <rect x="600" y="170" width="84" height="34" fill="#1d4ed8"/>
-  <rect x="696" y="170" width="84" height="34" fill="#ffffff" stroke="#cbd5e1"/>
-  <text x="104" y="192" font-family="Arial, sans-serif" font-size="14" fill="#64748b">HYUNDAI</text>
-  <text x="346" y="192" font-family="Arial, sans-serif" font-size="14" fill="#64748b">2000</text>
-  <text x="486" y="192" font-family="Arial, sans-serif" font-size="14" fill="#64748b">5000</text>
-  <text x="642" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">검색</text>
-  <text x="738" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#334155">초기화</text>
-  <rect x="64" y="252" width="756" height="428" fill="#ffffff" stroke="#e2e8f0"/>
-  <rect x="64" y="252" width="756" height="48" fill="#f1f5f9"/>
-  <text x="90" y="282" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#64748b">ID</text>
-  <text x="166" y="282" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#64748b">차량명</text>
-  <text x="388" y="282" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#64748b">가격</text>
-  <text x="510" y="282" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#64748b">제조사</text>
-  <text x="628" y="282" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#64748b">연식</text>
-  <text x="704" y="282" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#64748b">관리</text>
-  <g font-family="Arial, sans-serif" font-size="14" fill="#0f172a">
-    <text x="90" y="336">#1</text><text x="166" y="336" font-weight="700">Sonata</text><text x="388" y="336">2,500만원</text><text x="510" y="336">HYUNDAI</text><text x="628" y="336">2023</text>
-    <text x="90" y="392">#2</text><text x="166" y="392" font-weight="700">Avante</text><text x="388" y="392">1,900만원</text><text x="510" y="392">HYUNDAI</text><text x="628" y="392">2022</text>
-    <text x="90" y="448">#3</text><text x="166" y="448" font-weight="700">Grandeur</text><text x="388" y="448">3,600만원</text><text x="510" y="448">HYUNDAI</text><text x="628" y="448">2024</text>
+
+  <rect width="1200" height="112" fill="#ffffff"/>
+  <line y1="112" x2="1200" y2="112" stroke="#e2e8f0"/>
+
+  <text x="64" y="42" font-family="Verdana, Arial, sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">USED CAR ADMIN</text>
+  <text x="64" y="82" font-family="Verdana, Arial, sans-serif" font-size="31" font-weight="700" fill="#0f172a">중고차 관리 서비스</text>
+
+  <rect x="800" y="28" width="112" height="56" rx="2" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="856" y="50" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="12" fill="#64748b">조회</text>
+  <text x="856" y="74" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">60</text>
+
+  <rect x="924" y="28" width="112" height="56" rx="2" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="980" y="50" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="12" fill="#64748b">제조사</text>
+  <text x="980" y="74" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">17</text>
+
+  <rect x="1048" y="28" width="120" height="56" rx="2" fill="#0f172a"/>
+  <text x="1108" y="63" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">+ 차량 등록</text>
+
+  <rect x="64" y="144" width="1072" height="108" rx="2" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="88" y="176" font-family="Verdana, Arial, sans-serif" font-size="13" font-weight="700" fill="#334155">제조사 검색</text>
+  <text x="420" y="176" font-family="Verdana, Arial, sans-serif" font-size="13" font-weight="700" fill="#334155">최소 가격</text>
+  <text x="588" y="176" font-family="Verdana, Arial, sans-serif" font-size="13" font-weight="700" fill="#334155">최대 가격</text>
+
+  <rect x="88" y="190" width="292" height="44" rx="2" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="108" y="218" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#94a3b8">HYUNDAI</text>
+
+  <rect x="420" y="190" width="128" height="44" rx="2" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="440" y="218" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#94a3b8">2000</text>
+
+  <rect x="588" y="190" width="128" height="44" rx="2" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="608" y="218" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#94a3b8">5000</text>
+
+  <rect x="756" y="190" width="92" height="44" rx="2" fill="#1d4ed8"/>
+  <text x="802" y="218" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">검색</text>
+
+  <rect x="860" y="190" width="104" height="44" rx="2" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="912" y="218" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" font-weight="700" fill="#334155">초기화</text>
+
+  <text x="64" y="296" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#334155">페이지당</text>
+  <rect x="132" y="274" width="88" height="40" rx="2" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="176" y="300" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#334155">10개</text>
+  <text x="1136" y="298" text-anchor="end" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#64748b">1-10개 / 총 60개</text>
+
+  <rect x="64" y="332" width="1072" height="348" rx="2" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="64" y="332" width="1072" height="48" fill="#f1f5f9"/>
+
+  <text x="92" y="362" font-family="Verdana, Arial, sans-serif" font-size="12" font-weight="700" fill="#64748b">ID</text>
+  <text x="166" y="362" font-family="Verdana, Arial, sans-serif" font-size="12" font-weight="700" fill="#64748b">차량명</text>
+  <text x="474" y="362" font-family="Verdana, Arial, sans-serif" font-size="12" font-weight="700" fill="#64748b">가격</text>
+  <text x="610" y="362" font-family="Verdana, Arial, sans-serif" font-size="12" font-weight="700" fill="#64748b">제조사</text>
+  <text x="750" y="362" font-family="Verdana, Arial, sans-serif" font-size="12" font-weight="700" fill="#64748b">연식</text>
+  <text x="1002" y="362" font-family="Verdana, Arial, sans-serif" font-size="12" font-weight="700" fill="#64748b">관리</text>
+
+  <line x1="64" y1="428" x2="1136" y2="428" stroke="#e2e8f0"/>
+  <line x1="64" y1="476" x2="1136" y2="476" stroke="#e2e8f0"/>
+  <line x1="64" y1="524" x2="1136" y2="524" stroke="#e2e8f0"/>
+  <line x1="64" y1="572" x2="1136" y2="572" stroke="#e2e8f0"/>
+  <line x1="64" y1="620" x2="1136" y2="620" stroke="#e2e8f0"/>
+
+  <g font-family="Verdana, Arial, sans-serif" font-size="14" fill="#0f172a">
+    <text x="92" y="412" fill="#64748b">#1</text>
+    <text x="166" y="412" font-weight="700">Sonata</text>
+    <text x="474" y="412" fill="#334155">2,500만원</text>
+    <rect x="610" y="394" width="82" height="24" rx="2" fill="#f1f5f9"/>
+    <text x="651" y="411" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">HYUNDAI</text>
+    <text x="750" y="412" fill="#334155">2023</text>
+
+    <text x="92" y="460" fill="#64748b">#2</text>
+    <text x="166" y="460" font-weight="700">Avante</text>
+    <text x="474" y="460" fill="#334155">1,900만원</text>
+    <rect x="610" y="442" width="82" height="24" rx="2" fill="#f1f5f9"/>
+    <text x="651" y="459" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">HYUNDAI</text>
+    <text x="750" y="460" fill="#334155">2022</text>
+
+    <text x="92" y="508" fill="#64748b">#3</text>
+    <text x="166" y="508" font-weight="700">Grandeur</text>
+    <text x="474" y="508" fill="#334155">3,600만원</text>
+    <rect x="610" y="490" width="82" height="24" rx="2" fill="#f1f5f9"/>
+    <text x="651" y="507" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">HYUNDAI</text>
+    <text x="750" y="508" fill="#334155">2024</text>
+
+    <text x="92" y="556" fill="#64748b">#4</text>
+    <text x="166" y="556" font-weight="700">K5</text>
+    <text x="474" y="556" fill="#334155">2,300만원</text>
+    <rect x="610" y="538" width="58" height="24" rx="2" fill="#f1f5f9"/>
+    <text x="639" y="555" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">KIA</text>
+    <text x="750" y="556" fill="#334155">2021</text>
+
+    <text x="92" y="604" fill="#64748b">#5</text>
+    <text x="166" y="604" font-weight="700">BMW 520i</text>
+    <text x="474" y="604" fill="#334155">5,800만원</text>
+    <rect x="610" y="586" width="58" height="24" rx="2" fill="#f1f5f9"/>
+    <text x="639" y="603" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">BMW</text>
+    <text x="750" y="604" fill="#334155">2023</text>
   </g>
-  <line x1="64" y1="356" x2="820" y2="356" stroke="#e2e8f0"/>
-  <line x1="64" y1="412" x2="820" y2="412" stroke="#e2e8f0"/>
-  <line x1="64" y1="468" x2="820" y2="468" stroke="#e2e8f0"/>
-  <rect x="852" y="140" width="284" height="236" fill="#ffffff" stroke="#e2e8f0"/>
-  <text x="876" y="176" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">차량 등록</text>
-  <rect x="876" y="204" width="236" height="34" fill="#ffffff" stroke="#cbd5e1"/>
-  <rect x="876" y="252" width="236" height="34" fill="#ffffff" stroke="#cbd5e1"/>
-  <rect x="876" y="300" width="236" height="34" fill="#0f172a"/>
-  <text x="894" y="226" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">차량명</text>
-  <text x="894" y="274" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">가격 / 제조사 / 연식</text>
-  <text x="994" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">차량 등록</text>
-  <rect x="852" y="404" width="284" height="276" fill="#ffffff" stroke="#e2e8f0"/>
-  <text x="876" y="440" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">차량 상세</text>
-  <text x="876" y="486" font-family="Arial, sans-serif" font-size="14" fill="#64748b">차량명</text>
-  <text x="1112" y="486" text-anchor="end" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#0f172a">Sonata</text>
-  <text x="876" y="532" font-family="Arial, sans-serif" font-size="14" fill="#64748b">가격</text>
-  <text x="1112" y="532" text-anchor="end" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#0f172a">2,500만원</text>
-  <text x="876" y="578" font-family="Arial, sans-serif" font-size="14" fill="#64748b">제조사</text>
-  <text x="1112" y="578" text-anchor="end" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#0f172a">HYUNDAI</text>
+
+  <g font-family="Verdana, Arial, sans-serif" font-size="13" font-weight="700">
+    <rect x="974" y="393" width="68" height="32" rx="2" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="1008" y="414" text-anchor="middle" fill="#334155">수정</text>
+    <rect x="1054" y="393" width="68" height="32" rx="2" fill="#ffffff" stroke="#fecaca"/>
+    <text x="1088" y="414" text-anchor="middle" fill="#b91c1c">삭제</text>
+
+    <rect x="974" y="441" width="68" height="32" rx="2" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="1008" y="462" text-anchor="middle" fill="#334155">수정</text>
+    <rect x="1054" y="441" width="68" height="32" rx="2" fill="#ffffff" stroke="#fecaca"/>
+    <text x="1088" y="462" text-anchor="middle" fill="#b91c1c">삭제</text>
+
+    <rect x="974" y="489" width="68" height="32" rx="2" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="1008" y="510" text-anchor="middle" fill="#334155">수정</text>
+    <rect x="1054" y="489" width="68" height="32" rx="2" fill="#ffffff" stroke="#fecaca"/>
+    <text x="1088" y="510" text-anchor="middle" fill="#b91c1c">삭제</text>
+  </g>
+
+  <rect x="484" y="704" width="78" height="40" rx="2" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="523" y="729" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" font-weight="700" fill="#64748b">이전</text>
+  <text x="600" y="729" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" font-weight="700" fill="#334155">1 / 6</text>
+  <rect x="638" y="704" width="78" height="40" rx="2" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="677" y="729" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" font-weight="700" fill="#334155">다음</text>
 </svg>
